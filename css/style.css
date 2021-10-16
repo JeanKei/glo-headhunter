@@ -230,6 +230,15 @@ body {
 img {
   max-width: 100%;
 }
+.close-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  text-decoration: none;
+  font-size: 24px;
+  text-align: right;
+  padding: 20px;
+}
 
 @media (max-width: 1200px) {
   .offer-salary {
@@ -248,7 +257,6 @@ img {
   .tags-label {
     display: block;
     margin-bottom: 20px;
-    text-align: center;
   }
   .offer-title {
     text-align: center;
@@ -260,6 +268,25 @@ img {
   }
   .tags-group {
     margin-left: 0;
+  }
+  .navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+  }
+  .is-open {
+    transform: translateX(0);
+  }
+  .menu-item:not(:last-child) {
+    margin-right: 0;
+  }
+  .button-link {
+    margin-right: 0;
   }
 }
 @media (max-width: 576px) {
@@ -278,6 +305,9 @@ img {
     margin: auto;
   }
   .section-title {
+    text-align: center;
+  }
+  .tags-label {
     text-align: center;
   }
 }
